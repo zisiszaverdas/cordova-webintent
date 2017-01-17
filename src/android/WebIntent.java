@@ -201,6 +201,7 @@ public class WebIntent extends CordovaPlugin {
                 i.putExtra(key, value);
             }
         }
+	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         ((CordovaActivity)this.cordova.getActivity()).startActivity(i);
     }
 
